@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ENT 321 CBT Practice — Venture Creation</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand">📘 ENT 321 CBT Practice</div>
+    <div id="userBadgeWrap" class="user-badge-wrap hidden">
+      <span id="userBadge" class="user-badge"></span>
+      <button id="logoutBtn" class="btn-logout">Log out</button>
+    </div>
+  </div>
+</header>
+
+<main id="app">
+
+  <!-- LOGIN SCREEN -->
+  <section id="loginScreen" class="screen">
+    <div class="card login-card">
+      <h1>Welcome</h1>
+      <p class="muted">Enter your details to start practicing ENT 321 — Venture Creation CBT questions.</p>
+      <form id="loginForm">
+        <label for="studentName">Full Name</label>
+        <input type="text" id="studentName" placeholder="e.g. John Doe" required />
+
+        <label for="regNumber">Registration Number</label>
+        <input type="text" id="regNumber" placeholder="e.g. 20/ENG/12345" required />
+
+        <button type="submit" class="btn btn-primary">Login</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CHAPTER SELECTION SCREEN -->
+  <section id="chapterScreen" class="screen hidden">
+    <div class="section-head">
+      <h1>Choose a Chapter</h1>
+      <p class="muted">Each chapter test is timed at 30 minutes. Answer as many questions as you can before time runs out.</p>
+    </div>
+    <div id="chapterGrid" class="chapter-grid"></div>
+  </section>
+
+  <!-- TEST SCREEN -->
+  <section id="testScreen" class="screen hidden">
+    <div class="test-header">
+      <div>
+        <h2 id="testChapterTitle"></h2>
+        <div class="muted" id="testProgress"></div>
+      </div>
+      <div class="timer" id="timerDisplay">30:00</div>
+    </div>
+    <div id="questionNav" class="question-nav"></div>
+    <div id="questionList" class="question-list"></div>
+    <div class="test-footer">
+      <button id="submitTestBtn" class="btn btn-primary">Submit Test</button>
+    </div>
+  </section>
+
+  <!-- RESULTS SCREEN -->
+  <section id="resultsScreen" class="screen hidden">
+    <div class="card results-card">
+      <h1>Results</h1>
+      <div id="resultSummary" class="result-summary"></div>
+      <div id="resultBreakdown" class="result-breakdown"></div>
+      <div class="results-actions">
+        <button id="reviewBtn" class="btn btn-secondary">Review Answers</button>
+        <button id="backToChaptersBtn" class="btn btn-primary">Back to Chapters</button>
+      </div>
+    </div>
+    <div id="reviewList" class="question-list hidden"></div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="footer-inner">
+    <p>Need help or found an issue with a question?</p>
+    <p>
+      📧 <a href="mailto:bsaviourokon@gmail.com">bsaviourokon@gmail.com</a>
+      &nbsp;|&nbsp;
+      💬 <a href="https://wa.me/2349127396493" target="_blank" rel="noopener">WhatsApp: 0912 739 6493</a>
+    </p>
+  </div>
+</footer>
+
+<script src="questions.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
