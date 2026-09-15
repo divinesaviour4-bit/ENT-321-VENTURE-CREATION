@@ -1,13 +1,13 @@
 :root {
-  --navy: #0B3D91;
-  --blue: #2F6FED;
-  --pale: #EAF1FF;
-  --green: #1FAA59;
-  --red: #E4483F;
+  --navy: #145A32;      /* deep green — headers, topbar, timer */
+  --blue: #1FAA59;      /* primary green — buttons, links, accents */
+  --pale: #E8F8EE;      /* pale green tint — highlights, badges */
+  --green: #147A3D;     /* correct-answer accent */
+  --red: #E4483F;       /* wrong-answer / warning */
   --text: #1B2430;
   --muted: #6B7280;
-  --border: #DCE4F2;
-  --bg: #F5F8FE;
+  --border: #D7EFDE;
+  --bg: #F4FBF6;         /* soft white-green page background */
 }
 
 * { box-sizing: border-box; }
@@ -35,12 +35,28 @@ body {
   align-items: center;
 }
 .brand { font-weight: 700; font-size: 1.1rem; }
+.user-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
 .user-badge {
   background: rgba(255,255,255,0.15);
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 0.85rem;
 }
+.btn-logout {
+  background: transparent;
+  color: #fff;
+  border: 1px solid rgba(255,255,255,0.4);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+.btn-logout:hover { background: rgba(255,255,255,0.15); }
 
 main#app {
   max-width: 960px;
